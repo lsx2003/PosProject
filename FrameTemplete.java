@@ -11,6 +11,6 @@ public class FrameTemplete extends JFrame {
 		this.setResizable(false);
 		this.setVisible(true);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-	}
+	} 
 	
 }
