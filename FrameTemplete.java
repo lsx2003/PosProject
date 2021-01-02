@@ -7,7 +7,7 @@ import javax.swing.JFrame;
 public class FrameTemplete extends JFrame {
 	public FrameTemplete() {
         setLocationRelativeTo(null);
-        this.setTitle("SLR¿« PosMachine");
+        this.setTitle("SLRÏùò PosMachine");
 		this.setResizable(false);
 		this.setVisible(true);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
