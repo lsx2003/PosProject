@@ -14,40 +14,39 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 public class LoginFrame extends FrameTemplete {
-	
-	static Color ElectronBlue = new Color(9, 132, 227);
-	static Color OrangeVille = new Color(225, 112, 85);
-	static Font font1 = new Font("맑은 고딕",Font.BOLD, 40);
-	static Font font2 = new Font("맑은 고딕",Font.PLAIN, 15);
-	static Font font3 = new Font("맑은 고딕",Font.BOLD, 13);
-	
-	static JPanel mainPanel = new JPanel();
-	static JPanel northPanel = new JPanel();
-	static JPanel northTop = new JPanel();
-	static JPanel northCen = new JPanel();
-	static JPanel northBot = new JPanel();
-	static JPanel northLeft = new JPanel();
-	static JPanel northRight = new JPanel();
-	
-	
-	static JPanel southPanel = new JPanel();
-	static JPanel westPanel = new JPanel();
-	static JPanel eastPanel = new JPanel();
-	static JPanel mTopPanel = new JPanel();
-	static JPanel mCenPanel = new JPanel();
-	static JPanel mBotPanel = new JPanel();
-	
-	
-	static JLabel title = new JLabel("SRL의 POSMachine");
-	static JLabel id = new JLabel("아 이 디  : ");  
-	static JLabel password = new JLabel("패스워드 : ");
-	static JTextField idTF = new JTextField(10);
-	static JTextField passwordTF = new JTextField(10);
+	// Component 변수 선언 
+		Color ElectronBlue = new Color(9, 132, 227);
+		Color OrangeVille = new Color(225, 112, 85);
+		Font font1 = new Font("맑은 고딕",Font.BOLD, 40);
+		Font font2 = new Font("맑은 고딕",Font.PLAIN, 15);
+		Font font3 = new Font("맑은 고딕",Font.BOLD, 12);
+		
+		static JPanel mainPanel = new JPanel();
+		static JPanel northPanel = new JPanel();
+		JPanel northTop = new JPanel();
+		JPanel northCen = new JPanel();
+		JPanel northBot = new JPanel();
+		JPanel northLeft = new JPanel();
+		JPanel northRight = new JPanel();
+		
+		static JPanel southPanel = new JPanel();
+		static JPanel westPanel = new JPanel();
+		static JPanel eastPanel = new JPanel();
+		JPanel mTopPanel = new JPanel();
+		JPanel mCenPanel = new JPanel();
+		JPanel mBotPanel = new JPanel();
+				
+		JLabel title = new JLabel("SRL의 POSMachine");
+		JLabel id = new JLabel("아 이 디  : ");  
+		JLabel password = new JLabel("패스워드 : ");
+		JTextField idTF = new JTextField(10);
+		JTextField passwordTF = new JTextField(10);
 
-	static JButton loginBtn = new JButton("로그인");
-	static JButton regiBtn = new JButton("회원가입");	
-	static JButton exitBtn = new JButton("종 료");	
+		JButton loginBtn = new JButton("로그인");
+		JButton regiBtn = new JButton("회원가입");	
+		JButton exitBtn = new JButton("종 료");	 
 
+ 	// 로그인 기능 구현
 	public LoginFrame() {
 	
 		loginBtn.addActionListener( new ActionListener() {
@@ -68,20 +67,18 @@ public class LoginFrame extends FrameTemplete {
 		
 
 	}
-	
-public static void main(String[] args) {
-		
+		//Component 생성
+	public void CreateComponent() {
+
 		LoginFrame fr = new LoginFrame();
-		fr.setSize(1000, 600);
-		fr.setLayout(new BorderLayout());
-		
 		Container cp = fr.getContentPane();
+		
 		cp.add(northPanel, BorderLayout.NORTH);
 		cp.add(mainPanel, BorderLayout.CENTER);
 		cp.add(eastPanel, BorderLayout.EAST);
 		cp.add(westPanel, BorderLayout.WEST);
 		cp.add(southPanel, BorderLayout.SOUTH);
-		// 프레 위쪽패널 
+		// 프레임 위쪽패널 
 		northPanel.add(northTop, BorderLayout.NORTH);
 		northTop.setPreferredSize(new Dimension(1000, 5));
 
@@ -109,7 +106,7 @@ public static void main(String[] args) {
 		northPanel.setPreferredSize(new Dimension(1000, 250));
 		westPanel.setPreferredSize(new Dimension(300, 600));
 		eastPanel.setPreferredSize(new Dimension(300, 600));
-		southPanel.setPreferredSize(new Dimension(1000, 210));
+		southPanel.setPreferredSize(new Dimension(1000, 190));
 		mainPanel.setBackground(ElectronBlue);
 
 	// mainPanel 구성 
@@ -134,7 +131,13 @@ public static void main(String[] args) {
 		mBotPanel.setPreferredSize(new Dimension(250, 30));
 		mBotPanel.setBackground(ElectronBlue);
 
-		
-		
+	}
+	
+	
+	public static void main(String[] args) {
+		LoginFrame fr = new LoginFrame();
+		fr.CreateComponent();
+	
+	
 	}
 }
